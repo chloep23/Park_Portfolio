@@ -82,7 +82,7 @@ function App() {
               <a href="#about" className="font-Marcellus text-black hover:text-green-300 transition">
                 About
               </a>
-              <a href="#services" className="font-Marcellus text-black hover:text-green-300 transition">
+              <a href="#experiences" className="font-Marcellus text-black hover:text-green-300 transition">
                 Experience
               </a>
               <a href="#work" className="font-Marcellus text-black hover:text-green-300 transition">
@@ -97,9 +97,9 @@ function App() {
           className="hidden md:flex items-center justify-between h-[3.5rem] px-10" 
           id="large_nav"
         >
-          <div className="text-center text-lg text-black font-Marcellus">
+          <a href="#home" className="text-center text-lg text-black font-Marcellus">
                 Chloe Park
-          </div>
+          </a>
           <div className="flex space-x-8 font-Marcellus text-lg">
             <a href="#home" className="text-black hover:text-gray-400 transition">
               Home
@@ -107,7 +107,7 @@ function App() {
             <a href="#about" className="text-black hover:text-gray-400 transition">
               About
             </a>
-            <a href="#services" className="text-black hover:text-gray-400 transition">
+            <a href="#experiences" className="text-black hover:text-gray-400 transition">
               Experience
             </a>
             <a href="#work" className="text-black hover:text-gray-400 transition">
@@ -220,7 +220,7 @@ function App() {
                   animate={{ y: -20, opacity: 1 }}
                   transition={{delay:4.5, duration: 1}}>
                   <h4 className="absolute mt-16 ml-6 text-lg md:text-lg text-black font-Marcellus">
-                    <b>SEE MY WORKS</b><i className="bx bx-right-arrow-alt ml-1"></i>
+                    <a href="#work" className="text-black transition">SEE MY WORKS</a><i className="bx bx-right-arrow-alt ml-1"></i>
                   </h4>
                   <div className="bg-green rounded-full w-14 h-14 mt-12"></div>
                 </motion.div>
@@ -306,7 +306,7 @@ function App() {
             initial={{ opacity: 0, y: 200 }}
             animate={isExperienceInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
             transition={{ duration: 1.5 } }
-            className="py-16" id="services">
+            className="py-16" id="experiences">
             <div className="container mx-auto px-5 md:px-10">
               <div className="flex justify-center ml-3">
                   <span className="absolute text-center text-lg text-brown font-Marcellus mt-2">
@@ -363,7 +363,7 @@ function App() {
             initial={{ opacity: 0, y: 30 }}
             animate={isProjectsInView ? { opacity: 1, y: 0 }: {}}
             transition={{ duration: 1.5, ease: "easeInOut" }}
-            className="py-16" id="services">
+            className="py-16" id="work">
             <div className="container mx-auto px-5 md:px-10">
               <div className="flex justify-center ml-3">
                   <span className="absolute text-center text-lg text-brown font-Marcellus mt-2">
@@ -392,15 +392,15 @@ function App() {
               <div className="grid md:grid-cols-3 gap-10 w-3/4 mx-auto justify-center">
                   {projectElements.map((item, index) => (
                     <div key={index} className="rounded-xl flex flex-col bg-cream shadow-lg shadow-gray h-96 p-4 font-Marcellus">
-                        <img
-                        src={item.image}
-                        alt="Proj_Img"
-                        loading="lazy" 
-                        className={`rounded-t-lg h-36 w-60 transition-all duration-1000 ease-in-out ${
-                          loaded ? "opacity-100 blur-0" : "opacity-0 blur-lg"
-                        }`}
-                        onLoad={() => setLoaded(true)}
-                      />
+                       <img
+                            src={item.image}
+                            alt="Proj_Img"
+                            loading="lazy" 
+                            className={`rounded-t-lg h-36 w-full bg-beige transition-all duration-2000 ease-in-out ${
+                              loaded ? "opacity-100 blur-0" : "opacity-0 blur-lg"
+                            }`}
+                            onLoad={() => setLoaded(true)}
+                          />
                       <h4 className="text-sm text-gray-400 mt-4"> {item.date} </h4>
                       <h3 className="text-xl text-black mb-4 mt-2">
                         <b>{item.title}</b>
@@ -440,9 +440,4 @@ function App() {
             </ul>
           </footer>
         </div>
-      </div>
-    </div>
-  );
-}
-
-export default App;
+      </di

@@ -44,7 +44,7 @@ let timelineElements = [
         id: 5,
         title: "Secretary: Internal Affairs Coordinator",
         company: "CSters",
-        link: "",
+        link: "https://csters.rice.edu/",
         date: "Sep 2023 — Present",
         bullet1: " • Managing internal communications for the Officer Board and <strong>150+</strong> members, documenting <strong>meeting minutes</strong> while fostering a tight-knit <strong>sisterhood</strong>.",
         bullet2: " • Oversaw digital platforms as <strong>Webmaster</strong> and <strong>ListServ Manager</strong>, overseeing the website (currently renovating) and monthly newsletter.",
